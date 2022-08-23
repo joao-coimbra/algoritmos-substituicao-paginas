@@ -1,0 +1,24 @@
+.App {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(123.15deg, #C89FBE 16%, #5669BE 84.81%);
+
+    .container {
+        padding: 20vh 20vh;
+        display: flex;
+        gap: 5px;
+
+        input {
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            outline: none;
+            width: 1ch;
+            height: 1ch;
+            padding: 15px;
+
+            &:focus {
+                outline: 2px solid black;
+            }
+        }
+    }
+}
