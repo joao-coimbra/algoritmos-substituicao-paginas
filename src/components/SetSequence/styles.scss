@@ -1,0 +1,64 @@
+.App .container .set-sequence {
+    grid-area: seq;
+    height: fit-content;
+
+    // max-width: 100%;
+
+    > div {
+        padding: 3px;
+        display: flex;
+        gap: 5px;
+
+        max-width: 100%;
+        overflow-x: auto;
+
+        input, input:disabled {
+            border-radius: 6px;
+            border: 2px solid #ddd;
+            background-color: white;
+            outline: none;
+            width: 1ch;
+            height: 1ch;
+            padding: 15px;
+            font-size: 14pt;
+            font-weight: bold;
+            color: #212121;
+    
+            &:focus {
+                outline: 2px solid black;
+            }
+    
+            &:hover {
+                cursor: text;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            height: 15px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+          
+        &::-webkit-scrollbar-thumb {
+            background-color: #ffffff20;
+            border-radius: 50px;
+        }
+
+        @media screen and (max-width: 720px) {
+            &::-webkit-scrollbar {
+                height: initial;
+            }
+    
+            &::-webkit-scrollbar-track {
+                background: initial;
+            }
+              
+            &::-webkit-scrollbar-thumb {
+                background-color: initial;
+                border-radius: initial;
+            }
+        }
+    }
+}

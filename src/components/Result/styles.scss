@@ -1,0 +1,52 @@
+.App .container .result {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    grid-area: result;
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+
+        button {
+            cursor: pointer;
+            text-transform: uppercase;
+            padding: 8px 24px;
+
+            background-color: transparent;
+            border: 2px dashed #ffffff80;
+            border-radius: 6px;
+            color: #ffffff80;
+
+            transition: all 600ms;
+
+            &:hover {
+                border-style: solid;
+                background-color: #ffffff80;
+                // color: #212121;
+                // font-weight: bold;
+            }
+
+            &.selected {
+                border: 2px solid #ddd;
+                background-color: white;
+                color: #212121;
+                font-weight: bold;
+            }
+
+        }
+
+        @media screen and (max-width: 720px) {
+            gap: 0;
+            justify-content: space-between;
+        }
+    }
+
+    > button.process {
+        background-color: orange;
+        width: fit-content;
+        padding: 6px 64px;
+    }
+}

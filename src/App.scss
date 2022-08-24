@@ -1,23 +1,75 @@
 .App {
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     background: linear-gradient(123.15deg, #C89FBE 16%, #5669BE 84.81%);
 
     .container {
-        padding: 20vh 20vh;
-        display: flex;
-        gap: 5px;
+        padding: 10%;
 
-        input {
-            border-radius: 6px;
-            border: 1px solid #ddd;
-            outline: none;
-            width: 1ch;
-            height: 1ch;
-            padding: 15px;
+        h3 {
+            color: white;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 5px;
+            padding: 0 3px;
+        }
 
-            &:focus {
-                outline: 2px solid black;
+        display: grid;
+        gap: 60px 80px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: 'seq result'
+        'qnt result'
+        'none result';
+
+        @media screen and (max-width: 720px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            grid-template-areas: 'seq'
+            'qnt'
+            'result';
+            gap: 40px;
+            padding: 20% 10%;
+
+        }
+
+        .set-quantity {
+            grid-area: qnt;
+
+            div {
+                display: flex;
+                padding: 0 3px;
+                width: fit-content;
+
+                input {
+                    // border-radius: 6px;
+                    border: none;
+                    background-color: white;
+                    outline: none;
+                    box-sizing: content-box;
+                    width: 2ch;
+                    height: 1ch;
+                    padding: 15px;
+                    font-size: 14pt;
+                    font-weight: bold;
+                    color: #212121;
+                }
+
+                button {
+                    cursor: pointer;
+                    background-color: white;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 14pt;
+                    color: #212121;
+                    padding: 0 10px;
+
+                    transition: all 300ms;
+
+                    &:hover {
+                        background-color: #ffffff90;
+                    }
+                }
             }
         }
     }
