@@ -92,8 +92,12 @@
 
                     transition: all 300ms;
 
-                    &:hover {
-                        background-color: #ffffff90;
+                    
+
+                    @media screen and (min-width: 720px) {
+                        &:hover {
+                            background-color: #ffffff99;
+                        }
                     }
                 }
             }

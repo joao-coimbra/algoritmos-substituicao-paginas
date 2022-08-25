@@ -11,7 +11,9 @@ function Table({ collums }) {
                     <div key={index}>
                         <div>{collumn.seq}</div>
                         {collumn.quadros.map((quadro, index) => (
-                            <div key={index}>{quadro}</div>
+                            <div key={index}
+                                className={(quadro === collumn.seq) ? 'focus' : ''}
+                            >{quadro}</div>
                         ))}
                     </div>
                 ))}

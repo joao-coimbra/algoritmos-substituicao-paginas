@@ -28,7 +28,11 @@
 
                 > div {
                     border: 1px solid #00000005;
+                    &.focus {
+                        background-color: #ff000020 !important;
 
+                        color: red;
+                    }
                 }
             }
 

@@ -42,7 +42,7 @@ function Result({ seq, quadros, result, falhas }) {
         }
 
 
-    }, [seq, result])
+    }, [seq, result, quadros])
 
     return (
         <div className="result">
