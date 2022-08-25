@@ -3,49 +3,67 @@ import './styles.scss';
 
 import Table from './Table';
 
-function Result({ seq, quadros }) {
+function Result({ seq, quadros, result, falhas }) {
 
-    const [selected, setSelected] = useState({fifo: true})
+    const [selected, setSelected] = useState({ fifo: true })
 
-    const [result, setResult] = useState([])
+    const [resultTable, setResultTable] = useState([])
 
     useEffect(() => {
 
+        // console.log(result)
+
         let r = []
 
-        for (let index = 0; index < (seq.length-1); index++) {
-            r = [...r,
+        if (!!result.length) {
+            for (let index = 0; index < (seq.length - 1); index++) {
+                console.log(!result[index])
+                r = [...r,
+                    {
+                        seq: seq[index],
+                        quadros: !!result[index]
+                            ? result[index] !== result[index-1]
+                                ? result[index]
+                                : Array(quadros).fill(null)
+                            : Array(quadros).fill(null)
+                    }
+                ];
+            }
+
+            setResultTable(r);
+
+        } else {
+            setResultTable(Array(14).fill(
                 {
-                    seq: seq[index],
-                    quadros: Array(parseInt(quadros) || 1).fill(null)
+                    seq: null,
+                    quadros: Array(quadros).fill(null)
                 }
-            ];
+            ));
         }
 
-        setResult([...r])
 
-    }, [seq, quadros])
+    }, [seq, result])
 
     return (
         <div className="result">
             <div className="buttons">
                 <button className={selected.fifo ? 'selected' : ''}
-                    onClick={() => setSelected({fifo: true})}
+                    onClick={() => setSelected({ fifo: true })}
                 >FIFO</button>
                 <button className={selected.great ? 'selected' : ''}
-                    onClick={() => setSelected({great: true})}
+                    onClick={() => setSelected({ great: true })}
                 >Ótimo</button>
                 <button className={selected.lru ? 'selected' : ''}
-                    onClick={() => setSelected({lru: true})}
+                    onClick={() => setSelected({ lru: true })}
                 >LRU</button>
                 <button className={selected.lifo ? 'selected' : ''}
-                    onClick={() => setSelected({lifo: true})}
+                    onClick={() => setSelected({ lifo: true })}
                 >LIFO</button>
             </div>
-            
-            <Table collums={result} />
 
-            <button className='process'>Processar</button>
+            <Table collums={resultTable} />
+
+            <div className='process'><span>{falhas}</span> Falhas</div>
         </div>
     )
 }

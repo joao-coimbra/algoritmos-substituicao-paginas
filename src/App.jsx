@@ -10,43 +10,50 @@ function App() {
 
     const [seq, setSeq] = useState(['']);
     const [quadros, setQuadros] = useState(3);
+    const [resultArr, setResultArr] = useState([]);
+
+    const [falhas, setFalhas] = useState(0);
 
     useEffect(() => {
         let a = [...seq]
         a.pop()
         let result = []
+        let valuesCount = []
+        let fail = 0;
         for(let x in a) {
             let value = a[x];
             let index = parseInt(x);
             if(!index) {
                 result.push([value, ...Array(quadros-1).fill(null)])
-                console.log(result)
+                valuesCount.push(value)
+                fail++
             } else {
                 if(result[index-1].includes(value)) {
                     result.push(result[index-1])
+                    // for(let i = 0; i < quadros; i++) {
+                    //     if(!!result[index-1][i]) {
+                    //         valuesCount[result[index-1][i]] = (valuesCount[result[index-1][i]] || 0) + 1
+                    //     }
+                    // }
                 } else {
+                    fail++
                     if(result[index-1].includes(null)) {
-                    } else result.push([4, 7, 1])
+                        result.push([...result[index-1]])
+                        result[index].splice(result[index-1].indexOf(null), 1, value)
+                        valuesCount.push(value)
+                    } else {
+                        result.push([...result[index-1]])
+                        result[index].splice(result[index-1].indexOf(valuesCount[0]), 1, value)
+                        valuesCount.shift();
+                        valuesCount.push(value);
+                    }
                 }
             }
         }
-        console.log(result);
-
-        // a.forEach((x, index) => {
-        //     if(!index) {
-        //         setResult([[x, ...Array(quadros-1).fill(null)]])
-        //     } else {
-        //         console.log(result[index-1], x)
-        //         if(result[index-1].includes(x)) {
-        //             result[index] = result[index-1]
-        //             setResult([...result])
-        //         } else {
-
-        //         }
-        //         // console.log()
-        //         // setResult([[x, '', '']])
-        //     }
-        // });
+        // console.log(valuesCount)
+        // console.log(result)
+        setFalhas(fail);
+        setResultArr(result)
     }, [seq, quadros])
 
 
@@ -89,7 +96,12 @@ function App() {
                         ><AiOutlinePlus /></button>
                     </div>
                 </div>
-                <Result seq={seq} quadros={quadros}/>
+                <Result
+                    seq={seq}
+                    quadros={quadros}
+                    result={resultArr}
+                    falhas={falhas}
+                />
             </div>
         </div>
     );

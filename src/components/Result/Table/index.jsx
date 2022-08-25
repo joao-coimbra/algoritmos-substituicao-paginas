@@ -2,7 +2,7 @@ import './styles.scss'
 
 function Table({ collums }) {
 
-    // console.log(collums)
+    console.log(collums)
 
     return(
         <div className="h-table">
