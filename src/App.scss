@@ -1,10 +1,9 @@
 .App {
     width: 100vw;
-    // height: 100vh;
-    background: linear-gradient(123.15deg, #C89FBE 16%, #5669BE 84.81%);
+    height: 100%;
 
     .container {
-        padding: 10%;
+        padding: 5% 10%;
 
         h3 {
             color: white;
@@ -15,19 +14,46 @@
         }
 
         display: grid;
-        gap: 60px 80px;
+        gap: 40px 80px;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-areas: 'seq result'
+        grid-template-areas: 'title title' 'seq result'
         'qnt result'
         'none result';
 
+        .title {
+            grid-area: title;
+
+            // line-height: 50%;
+
+            h1, h2 {
+                margin: 0;
+            }
+
+            h1 {
+                color: white;
+            }
+
+            h2 {
+                color: #ffffff80;
+                font-weight: 500;
+                font-size: 12pt;
+            }
+
+            @media screen and (max-width: 720px) {
+                line-height:initial;
+                
+                text-align: center;
+            }
+        }
+
         @media screen and (max-width: 720px) {
             grid-template-columns: repeat(1, minmax(0, 1fr));
-            grid-template-areas: 'seq'
+            grid-template-areas: 'title'
+            'seq'
             'qnt'
             'result';
             gap: 40px;
-            padding: 20% 10%;
+            padding: 10%;
 
         }
 
@@ -45,7 +71,7 @@
                     background-color: white;
                     outline: none;
                     box-sizing: content-box;
-                    width: 2ch;
+                    // width: 2ch;
                     height: 1ch;
                     padding: 15px;
                     font-size: 14pt;
