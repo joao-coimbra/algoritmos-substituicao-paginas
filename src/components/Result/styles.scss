@@ -55,6 +55,7 @@
         display: none;
 
         select {
+            -webkit-appearance: none;
             padding: 10px !important;
             border-radius: 0 !important;
         }
