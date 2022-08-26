@@ -3,11 +3,14 @@ import './styles.scss';
 
 import Table from './Table';
 
-function Result({ seq, quadros, result, falhas }) {
+function Result({ seq, quadros, result, falhas, setMethod }) {
 
     const [selected, setSelected] = useState({ fifo: true })
 
     const [resultTable, setResultTable] = useState([])
+    const [viewFails, setViewFails] = useState(false);
+    // const [clickable, setClickable] = useState(false);
+    // console.log(falhas)
 
     useEffect(() => {
 
@@ -17,7 +20,7 @@ function Result({ seq, quadros, result, falhas }) {
 
         if (!!result.length) {
             for (let index = 0; index < (seq.length - 1); index++) {
-                console.log(!result[index])
+
                 r = [...r,
                     {
                         seq: seq[index],
@@ -25,12 +28,16 @@ function Result({ seq, quadros, result, falhas }) {
                             ? result[index] !== result[index-1]
                                 ? result[index]
                                 : Array(quadros).fill(null)
-                            : Array(quadros).fill(null)
+                            : Array(quadros).fill(null),
+                        fail: falhas[index]
                     }
                 ];
             }
 
-            setResultTable(r);
+            setResultTable([...r, ...Array(14-r.length > 0 ? 14-r.length : 0 ).fill({
+                seq: null,
+                quadros: Array(quadros).fill(null),
+            })]);
 
         } else {
             setResultTable(Array(14).fill(
@@ -42,28 +49,44 @@ function Result({ seq, quadros, result, falhas }) {
         }
 
 
-    }, [seq, result, quadros])
+    }, [seq, result, quadros, falhas])
 
     return (
         <div className="result">
             <div className="buttons">
                 <button className={selected.fifo ? 'selected' : ''}
-                    onClick={() => setSelected({ fifo: true })}
+                    onClick={() => {
+                        setMethod('fifo')
+                        setSelected({ fifo: true })
+                    }}
                 >FIFO</button>
                 <button className={selected.great ? 'selected' : ''}
-                    onClick={() => setSelected({ great: true })}
+                    onClick={() => {
+                        setMethod('great')
+                        setSelected({ great: true })
+                    }}
                 >Ótimo</button>
                 <button className={selected.lru ? 'selected' : ''}
-                    onClick={() => setSelected({ lru: true })}
+                    onClick={() => {
+                        setMethod('lru')
+                        setSelected({ lru: true })
+                    }}
                 >LRU</button>
                 <button className={selected.lifo ? 'selected' : ''}
-                    onClick={() => setSelected({ lifo: true })}
+                    onClick={() => {
+                        setMethod('lifo')
+                        setSelected({ lifo: true })
+                    }}
                 >LIFO</button>
             </div>
 
-            <Table collums={resultTable} />
+            <Table collums={resultTable} viewFails={viewFails}/>
 
-            <div className='process'><span>{falhas}</span> Falhas</div>
+            <div className='fails'
+                onMouseEnter={() => setViewFails(true)}
+                onClick={() => setViewFails(!viewFails)}
+                onMouseLeave={() => setViewFails(false)}
+            ><span>{falhas.filter(f => {return f}).length}</span> Falhas</div>
         </div>
     )
 }
