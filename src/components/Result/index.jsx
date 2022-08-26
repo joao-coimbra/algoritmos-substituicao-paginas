@@ -80,6 +80,18 @@ function Result({ seq, quadros, result, falhas, setMethod }) {
                 >LIFO</button>
             </div>
 
+            <label htmlFor="method">Método
+                <select defaultValue='fifo'
+                    onChange={e => setMethod(e.target.value)}
+                >
+                    <option value="fifo">FIFO</option>
+                    <option value="great">ÓTIMO</option>
+                    <option value="lru">LRU</option>
+                    <option value="lifo">LIFO</option>
+                </select>
+            </label>
+            
+
             <Table collums={resultTable} viewFails={viewFails}/>
 
             <div className='fails'

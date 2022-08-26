@@ -45,6 +45,30 @@
         }
     }
 
+    label {
+        gap: 5px;
+        flex-direction: column;
+        color: white;
+        font-weight: 500;
+        padding: 0 3px;
+
+        display: none;
+
+        select {
+            padding: 10px;
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        .buttons {
+            display: none;
+        }
+
+        label {
+            display: flex;
+        }
+    }
+
     > div.fails {
         cursor: default;
         background-color: orange;
