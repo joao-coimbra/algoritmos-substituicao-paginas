@@ -25,20 +25,21 @@ function App() {
         let valuesCount = []
         let fail = [];
         let newseq = [...seq]
+        let countQ = quadros && (quadros >= 10) ? quadros : 1
         switch (method) {
             case 'fifo':
                 for (let x in a) {
                     let value = a[x];
                     let index = parseInt(x);
                     if (!index) {
-                        result.push([value, ...Array(quadros - 1).fill(null)])
+                        result.push([value, ...Array(countQ - 1).fill(null)])
                         valuesCount.push(value)
                         fail.push(true)
                     } else {
                         if (result[index - 1].includes(value)) {
                             fail.push(false)
                             result.push(result[index - 1])
-                            // for(let i = 0; i < quadros; i++) {
+                            // for(let i = 0; i < countQ; i++) {
                             //     if(!!result[index-1][i]) {
                             //         valuesCount[result[index-1][i]] = (valuesCount[result[index-1][i]] || 0) + 1
                             //     }
@@ -64,13 +65,13 @@ function App() {
                     let value = a[x];
                     let index = parseInt(x);
                     if (!index) {
-                        result.push([value, ...Array(quadros - 1).fill(null)]);
+                        result.push([value, ...Array(countQ - 1).fill(null)]);
                         fail.push(true);
                     } else {
                         if (result[index - 1].includes(value)) {
                             fail.push(false);
                             result.push(result[index - 1]);
-                            // for(let i = 0; i < quadros; i++) {
+                            // for(let i = 0; i < countQ; i++) {
                             //     if(!!result[index-1][i]) {
                             //         valuesCount[result[index-1][i]] = (valuesCount[result[index-1][i]] || 0) + 1
                             //     }
@@ -128,7 +129,7 @@ function App() {
                     let value = a[x];
                     let index = parseInt(x);
                     if (!index) {
-                        result.push([value, ...Array(quadros - 1).fill(null)]);
+                        result.push([value, ...Array(countQ - 1).fill(null)]);
                         fail.push(true);
                         valuesCount.push(value);
                     } else {
@@ -137,7 +138,7 @@ function App() {
                             result.push(result[index - 1]);
                             valuesCount.splice(valuesCount.indexOf(value), 1);
                             valuesCount.push(value);
-                            // for(let i = 0; i < quadros; i++) {
+                            // for(let i = 0; i < countQ; i++) {
                             //     if(!!result[index-1][i]) {
                             //         valuesCount[result[index-1][i]] = (valuesCount[result[index-1][i]] || 0) + 1
                             //     }
@@ -165,14 +166,14 @@ function App() {
                     let value = a[x];
                     let index = parseInt(x);
                     if (!index) {
-                        result.push([value, ...Array(quadros - 1).fill(null)])
+                        result.push([value, ...Array(countQ - 1).fill(null)])
                         valuesCount.push(value)
                         fail.push(true)
                     } else {
                         if (result[index - 1].includes(value)) {
                             fail.push(false)
                             result.push(result[index - 1])
-                            // for(let i = 0; i < quadros; i++) {
+                            // for(let i = 0; i < countQ; i++) {
                             //     if(!!result[index-1][i]) {
                             //         valuesCount[result[index-1][i]] = (valuesCount[result[index-1][i]] || 0) + 1
                             //     }
