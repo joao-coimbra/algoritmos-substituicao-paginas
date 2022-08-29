@@ -1,25 +1,25 @@
 import './styles.scss'
 
-function Table({ collums, viewFails }) {
+function Table({ columns, viewFails }) {
 
-    // console.log(collums)
+    // console.log(columns)
 
     return(
         <div className="h-table">
             <div className='content'>
-                {collums.map((collumn, index) => (
+                {columns.map((column, index) => (
                     
-                    <div key={index} className={(collumn.fail && viewFails) ? 'fail' : ''}
-                        title={collumn.quadros.filter((este, i) => collumn.quadros.indexOf(este) === i).filter(arr => !arr).length
-                                    ? collumn.seq
-                                        ? `Página ${collumn.seq} já está na memória`
+                    <div key={index} className={(column.fail && viewFails) ? 'fail' : ''}
+                        title={column.quadros.filter((este, i) => column.quadros.indexOf(este) === i).filter(arr => !arr).length
+                                    ? column.seq
+                                        ? `Página ${column.seq} já está na memória`
                                         : null
-                                    : `Página ${collumn.seq} substitui a posição ${(parseInt(collumn.quadros.indexOf(collumn.seq))+1)} `}
+                                    : `Página ${column.seq} substitui a posição ${(parseInt(column.quadros.indexOf(column.seq))+1)} `}
                     >
-                        <div>{collumn.seq}</div>
-                        {collumn.quadros.map((quadro, index) => (
+                        <div>{column.seq}</div>
+                        {column.quadros.map((quadro, index) => (
                             <div key={index}
-                                className={(quadro === collumn.seq) ? 'focus' : ''}
+                                className={(quadro === column.seq) ? 'focus' : ''}
                             >{quadro}</div>
                         ))}
                     </div>

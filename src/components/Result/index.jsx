@@ -92,7 +92,7 @@ function Result({ seq, quadros, result, falhas, setMethod }) {
             </label>
             
 
-            <Table collums={resultTable} viewFails={viewFails}/>
+            <Table columns={resultTable} viewFails={viewFails}/>
 
             <div className='fails'
                 onMouseEnter={() => setViewFails(true)}

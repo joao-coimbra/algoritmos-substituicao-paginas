@@ -83,9 +83,7 @@ function App() {
                                 result.push([...result[index - 1]])
                                 result[index].splice(result[index - 1].indexOf(null), 1, value)
                             } else {
-                                console.log(index)
                                 result.push([...result[index - 1]])
-                                console.log(newseq)
                                     // let query;
                                 let indexqmax = 0;
                                 let indexq;
@@ -94,12 +92,9 @@ function App() {
                                 for(let b in result[index - 1]) {
                                     indexq = newseq.indexOf(result[index - 1][b])
                                     // console.log(result[index - 1])
-                                    console.log('value index arr: ' + result[index - 1][b])
-                                    console.log('index query:' + indexq)
                                     // console.log(indexq)
                                     // console.log(indexq)
                                     if(indexq < 0) {
-                                        console.log('here!')
                                         result[index].splice(b, 1, value)
                                         break;
                                     } else {
@@ -142,7 +137,6 @@ function App() {
                             //         valuesCount[result[index-1][i]] = (valuesCount[result[index-1][i]] || 0) + 1
                             //     }
                             // }
-                            console.log(valuesCount)
                         } else {
                             fail.push(true)
                             if (result[index - 1].includes(null)) {
@@ -154,7 +148,6 @@ function App() {
                                 result[index].splice(result[index - 1].indexOf(valuesCount[0]), 1, value)
                                 valuesCount.shift();
                                 valuesCount.push(value);
-                                console.log(valuesCount)
                             }
                         }
                     }
@@ -222,18 +215,19 @@ function App() {
                             }}
                         ><AiOutlineMinus /></button>
                         <input style={{ width: quadros.toString().length + 'ch' }} type="number" value={quadros} min='1'
-                            onChange={e => {
-                                if ((parseInt(e.target.value) <= 50 && parseInt(e.target.value) >= 1) || !e.target.value) {
-                                    setQuadros(e.target.value)
-                                } else if (parseInt(e.target.value) < 1) {
-                                    setQuadros(1)
-                                } else if (parseInt(e.target.value) > 10) {
-                                    setQuadros(10)
-                                }
-                            }}
-                            onBlur={e => {
-                                !e.target.value && setQuadros(1);
-                            }}
+                            disabled
+                            // onChange={e => {
+                            //     if ((parseInt(e.target.value) <= 50 && parseInt(e.target.value) >= 1) || !e.target.value) {
+                            //         setQuadros(e.target.value)
+                            //     } else if (parseInt(e.target.value) < 1) {
+                            //         setQuadros(1)
+                            //     } else if (parseInt(e.target.value) > 10) {
+                            //         setQuadros(10)
+                            //     }
+                            // }}
+                            // onBlur={e => {
+                            //     !e.target.value && setQuadros(1);
+                            // }}
                         />
                         <button
                             onClick={() => {
