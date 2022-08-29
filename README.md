@@ -11,7 +11,7 @@ Os algorítmos de substituição de páginas tem o objetivo de simular a estrutu
 
 ## Índice
 
-* [Objetivos](#-objetivos)
+* [Objetivos](#fire-objetivos)
 * [Funcionalidades](#-funcionalidades)
 * [Técnicas e Tecnologias](#-técnicas-e-tecnologias)
 * [Acesso ao projeto](#-acesso-ao-projeto)
