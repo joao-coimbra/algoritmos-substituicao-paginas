@@ -7,7 +7,7 @@ Projeto desenvolvido para o trabalho da disciplina Sistemas Operacionais Abertos
 
 > Paginação é uma estrutura de gerenciamento de memória pelo qual um computador armazena e recupera dados de um armazenamento secundário para uso na memória principal. Para minimizar a informação necessária à conversão, a memória virtual é logicamente dividida em páginas de mesmo tamanho.
 
-Os algorítmos de substituição de páginas tem o objetivo de simular a estrutura de paginação do gerenciamento de memória feita pelo sistema operacional em diferentes métodos utilizados.
+Os algorítmos de substituição de páginas tem o objetivo de simular a estrutura de paginação do gerenciamento de memória feita pelo sistema operacional, CPU e a memória virtual em diferentes métodos utilizados.
 
 ## Índice
 
@@ -16,6 +16,7 @@ Os algorítmos de substituição de páginas tem o objetivo de simular a estrutu
 * [Técnicas e Tecnologias](#zap-técnicas-e-tecnologias)
 * [Acesso ao projeto](#open_file_folder-acesso-ao-projeto)
 * [Abrir e rodar o projeto](#hammer_and_wrench-abrir-e-rodar-o-projeto)
+* [License](#license)
 
 ## :dart: Objetivos
 
@@ -63,3 +64,6 @@ npm start
 ```
 
 Será aberto em seu navegador padrão o link [http://localhost:3000](http://localhost:3000) e então é só aproveitar.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
