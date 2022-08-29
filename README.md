@@ -3,7 +3,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green) ![Data da última versão](https://img.shields.io/badge/release%20date-august-yellowgreen)
 
-Projeto desenvolvido para o trabalho da disciplina Sistemas Operacionais Abertos e Mobile do curso de Ciências da Computação.
+Projeto desenvolvido para o trabalho da disciplina Sistemas Operacionais Abertos e Mobile do curso de Bacharelado em Ciência da Computação, UNIP.
 
 > Paginação é uma estrutura de gerenciamento de memória pelo qual um computador armazena e recupera dados de um armazenamento secundário para uso na memória principal. Para minimizar a informação necessária à conversão, a memória virtual é logicamente dividida em páginas de mesmo tamanho.
 
