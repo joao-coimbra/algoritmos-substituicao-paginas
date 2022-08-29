@@ -11,23 +11,23 @@ Os algorítmos de substituição de páginas tem o objetivo de simular a estrutu
 
 ## Índice
 
-* [Objetivos](#fire-objetivos)
-* [Funcionalidades](#-funcionalidades)
-* [Técnicas e Tecnologias](#-técnicas-e-tecnologias)
-* [Acesso ao projeto](#-acesso-ao-projeto)
-* [Abrir e rodar o projeto](#🛠️-abrir-e-rodar-o-projeto)
+* [Objetivos](#dart-objetivos)
+* [Funcionalidades](#hammer-funcionalidades)
+* [Técnicas e Tecnologias](#zap-técnicas-e-tecnologias)
+* [Acesso ao projeto](#openfilefolder-acesso-ao-projeto)
+* [Abrir e rodar o projeto](#hammerandwrench-abrir-e-rodar-o-projeto)
 
-## :fire: Objetivos
+## :dart: Objetivos
 
 - Implementar os algotítmos de substituição de páginas, ultilizando uma linguagem visual
 - Entender e aplicar o funcionamento realizado pelo sistema operacional no processo de paginação no gerenciamento de memória
 
-## 🔨 Funcionalidades
+## :hammer: Funcionalidades
 
 O programa reflete algoritmos utilizados pelo sistema operacional para realizar a substituição de páginas no processo de paginação.
 Sendo eles: [FIFO](#fifo); [Ótimo](#great); [LRU](#lru); [LIFO](#lifo).
 
-## ✔️ Técnicas e Tecnologias
+## :zap: Técnicas e Tecnologias
 
 As técnicas e tecnologias utilizadas são:
 
@@ -36,7 +36,7 @@ As técnicas e tecnologias utilizadas são:
 - [Sass](https://sass-lang.com/): Sass é a linguagem de extensão CSS de nível profissional mais madura, estável e poderosa  do mundo.
 - [Styled Components](https://styled-components.com/): Primitivas visuais para a idade do componente.
 
-## 📁 Acesso ao projeto
+## :open_file_folder: Acesso ao projeto
 
 Você pode acessar o projeto:
 - clonando o repositório pelo link [algoritmos-substituicao-paginas](https://github.com/joao-coimbra/algoritmos-substituicao-paginas.git):
@@ -47,7 +47,7 @@ git clone https://github.com/joao-coimbra/algoritmos-substituicao-paginas.git
 
 - Fazendo o download do projeto [clicando aqui](https://github.com/joao-coimbra/algoritmos-substituicao-paginas/archive/refs/heads/master.zip).
 
-## 🛠️ Abrir e rodar o projeto
+## :hammer_and_wrench: Abrir e rodar o projeto
 
 Após realizar o download do projeto, instale suas dependências
 
