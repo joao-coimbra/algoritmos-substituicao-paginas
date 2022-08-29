@@ -14,8 +14,8 @@ Os algorítmos de substituição de páginas tem o objetivo de simular a estrutu
 * [Objetivos](#dart-objetivos)
 * [Funcionalidades](#hammer-funcionalidades)
 * [Técnicas e Tecnologias](#zap-técnicas-e-tecnologias)
-* [Acesso ao projeto](#openfilefolder-acesso-ao-projeto)
-* [Abrir e rodar o projeto](#hammerandwrench-abrir-e-rodar-o-projeto)
+* [Acesso ao projeto](#open_file_folder-acesso-ao-projeto)
+* [Abrir e rodar o projeto](#hammer_and_wrench-abrir-e-rodar-o-projeto)
 
 ## :dart: Objetivos
 
