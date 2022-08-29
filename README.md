@@ -11,13 +11,13 @@ Os algorítmos de substituição de páginas tem o objetivo de simular a estrutu
 
 ## Índice
 
-* [Objetivos](#🔥-objetivos)
-* [Funcionalidades](#🔨-funcionalidades)
-* [Técnicas e Tecnologias](#✔️-técnicas-e-tecnologias)
-* [Acesso ao projeto](#📁-acesso-ao-projeto)
+* [Objetivos](#-objetivos)
+* [Funcionalidades](#-funcionalidades)
+* [Técnicas e Tecnologias](#-técnicas-e-tecnologias)
+* [Acesso ao projeto](#-acesso-ao-projeto)
 * [Abrir e rodar o projeto](#🛠️-abrir-e-rodar-o-projeto)
 
-## 🔥 Objetivos
+## :fire: Objetivos
 
 - Implementar os algotítmos de substituição de páginas, ultilizando uma linguagem visual
 - Entender e aplicar o funcionamento realizado pelo sistema operacional no processo de paginação no gerenciamento de memória
