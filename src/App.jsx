@@ -59,7 +59,7 @@ function App() {
                     }
                 }
                 break;
-            case 'great':
+            case 'optimal':
                 for (let x in a) {
                     let value = a[x];
                     let index = parseInt(x);

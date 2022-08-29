@@ -60,10 +60,10 @@ function Result({ seq, quadros, result, falhas, setMethod }) {
                         setSelected({ fifo: true })
                     }}
                 >FIFO</button>
-                <button className={selected.great ? 'selected' : ''}
+                <button className={selected.optimal ? 'selected' : ''}
                     onClick={() => {
-                        setMethod('great')
-                        setSelected({ great: true })
+                        setMethod('optimal')
+                        setSelected({ optimal: true })
                     }}
                 >Ótimo</button>
                 <button className={selected.lru ? 'selected' : ''}
@@ -85,7 +85,7 @@ function Result({ seq, quadros, result, falhas, setMethod }) {
                     onChange={e => setMethod(e.target.value)}
                 >
                     <option value="fifo">FIFO</option>
-                    <option value="great">ÓTIMO</option>
+                    <option value="optimal">ÓTIMO</option>
                     <option value="lru">LRU</option>
                     <option value="lifo">LIFO</option>
                 </select>
