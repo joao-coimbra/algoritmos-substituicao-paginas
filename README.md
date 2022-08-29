@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Algorítmos de substituição de páginas
+## _Gerenciamento de memória_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License](https://img.shields.io/badge/license-MIT-green) ![Data da última versão](https://img.shields.io/badge/release%20date-august-yellowgreen)
 
-## Available Scripts
+Projeto desenvolvido para o trabalho da disciplina Sistemas Operacionais Abertos e Mobile do curso de Ciências da Computação.
 
-In the project directory, you can run:
+> Paginação é uma estrutura de gerenciamento de memória pelo qual um computador armazena e recupera dados de um armazenamento secundário para uso na memória principal. Para minimizar a informação necessária à conversão, a memória virtual é logicamente dividida em páginas de mesmo tamanho.
 
-### `npm start`
+Os algorítmos de substituição de páginas tem o objetivo de simular a estrutura de paginação do gerenciamento de memória feita pelo sistema operacional em diferentes métodos utilizados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Índice
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [Objetivos](#🔥-objetivos)
+* [Funcionalidades](#🔨-funcionalidades)
+* [Técnicas e Tecnologias](#✔️-técnicas-e-tecnologias)
+* [Acesso ao projeto](#📁-acesso-ao-projeto)
+* [Abrir e rodar o projeto](#🛠️-abrir-e-rodar-o-projeto)
 
-### `npm test`
+## 🔥 Objetivos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Implementar os algotítmos de substituição de páginas, ultilizando uma linguagem visual
+- Entender e aplicar o funcionamento realizado pelo sistema operacional no processo de paginação no gerenciamento de memória
 
-### `npm run build`
+## 🔨 Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O programa reflete algoritmos utilizados pelo sistema operacional para realizar a substituição de páginas no processo de paginação.
+Sendo eles: [FIFO](#fifo); [Ótimo](#great); [LRU](#lru); [LIFO](#lifo).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✔️ Técnicas e Tecnologias
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As técnicas e tecnologias utilizadas são:
 
-### `npm run eject`
+- [Reactjs](https://reactjs.org/): Uma biblioteca JavaScript para criar interfaces de usuário.
+- [Node.js](https://nodejs.org/): Node.js® é um runtime JavaScript desenvolvido com o Chrome's V8 JavaScript engine.
+- [Sass](https://sass-lang.com/): Sass é a linguagem de extensão CSS de nível profissional mais madura, estável e poderosa  do mundo.
+- [Styled Components](https://styled-components.com/): Primitivas visuais para a idade do componente.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Acesso ao projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Você pode acessar o projeto:
+- clonando o repositório pelo link [algoritmos-substituicao-paginas](https://github.com/joao-coimbra/algoritmos-substituicao-paginas.git):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+git clone https://github.com/joao-coimbra/algoritmos-substituicao-paginas.git
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Fazendo o download do projeto [clicando aqui](https://github.com/joao-coimbra/algoritmos-substituicao-paginas/archive/refs/heads/master.zip).
 
-## Learn More
+## 🛠️ Abrir e rodar o projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Após realizar o download do projeto, instale suas dependências
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+cd algoritmos-substituicao-paginas
+npm install
+```
 
-### Code Splitting
+Agora é só rodar !
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+npm start
+```
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Será aberto em seu navegador padrão o link [http://localhost:3000](http://localhost:3000) e então é só aproveitar.
