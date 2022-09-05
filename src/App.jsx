@@ -197,7 +197,6 @@ function App() {
         setResultArr(result);
     }, [method, seq, quadros])
 
-
     return (
         <div className="App">
             <div className="container">
