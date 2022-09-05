@@ -154,6 +154,7 @@ function App() {
                 }
                 break;
             case 'lifo':
+                let lastPage;
                 for (let x in a) {
                     let value = a[x];
                     let index = parseInt(x);
@@ -165,6 +166,7 @@ function App() {
                         if (result[index - 1].includes(value)) {
                             fail.push(false)
                             result.push(result[index - 1])
+                            lastPage = value;
                             // for(let i = 0; i < quadros; i++) {
                             //     if(!!result[index-1][i]) {
                             //         valuesCount[result[index-1][i]] = (valuesCount[result[index-1][i]] || 0) + 1
@@ -178,9 +180,10 @@ function App() {
                                 valuesCount.push(value)
                             } else {
                                 result.push([...result[index - 1]])
-                                result[index].splice(result[index - 1].indexOf(valuesCount[valuesCount.length - 1]), 1, value)
-                                valuesCount.pop();
-                                valuesCount.unshift(value);
+                                result[index].splice(result[index - 1].indexOf(lastPage), 1, value)
+                                // valuesCount.pop();
+                                // valuesCount.unshift(value);
+                                lastPage = value;
                             }
                         }
                     }
